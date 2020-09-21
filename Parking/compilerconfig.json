@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/bulma/bulma.css",
+    "inputFile": "wwwroot/bulma/bulma.sass"
+  },
+  {
+    "outputFile": "wwwroot/css/site.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/components/_parkingSpaces.css",
+    "inputFile": "wwwroot/css/components/_parkingSpaces.scss"
+  }
+]

@@ -1,0 +1,37 @@
+﻿@model List<Parking.Models.ParkingIndexViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Parking number
+            </th>
+            <th>
+                Permanently assign to
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParkingNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PermanentlyAssignToUser)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ParkingID">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

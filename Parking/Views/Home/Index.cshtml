@@ -1,0 +1,89 @@
+﻿@model List<Parking.Models.SpaceAndUserAssignmentIndex>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>You can see more details and days in advance by clicking in <a asp-area="" asp-controller="ManageUserAssignmentsToParking" asp-action="Index">Management</a></p>
+<br />
+<br />
+<br />
+
+
+<div class="columns">
+    <h1><b>Today</b></h1>
+</div>
+
+<div class="row row--1">
+    <div class="parking-spaces columns is-desktop is-mobile is-gapless is-multiline">
+        @foreach (var item in Model)
+        {
+            @if (item.CanThisUserfreeThisSpace)
+            {
+                <div class="parking-space column is-1">
+                    <form asp-action="FreeParking" asp-controller="ManageUserAssignmentsToParking" method="post" data-ajax="true" data-ajax-method="post">
+                        <input asp-for="@item.ID" name="ID" type="hidden" class="form-control">
+                        <input type="checkbox" onChange="this.form.submit()" checked id="@item.ID" />
+                        @if (item.isThisSpacePArtiallybookedToday)
+                        {
+                    <label class="partially-booked" for="@item.ID"> @item.AssignSpaceNumber <br/> must free by @item.StartTimeIfPartial.Value.ToString(@"hh\:mm")</label>
+                        }
+                        else
+                        {
+                            <label for="@item.ID">@item.AssignSpaceNumber</label>
+                        }
+                    </form>
+                </div>
+            }
+            else if (!string.IsNullOrEmpty(item.AssignedUser) || !string.IsNullOrEmpty(item.Description))
+            {
+                @if (item.isThisSpacePArtiallybookedToday)
+                {
+                    <div class="parking-space column is-1">
+                        <form onclick="this.submit()" asp-action="UpdateAssignedUser" asp-controller="ManageUserAssignmentsToParking" method="post" data-ajax="true" data-ajax-method="post">
+                            <input asp-for="@item.ID" name="ID" type="hidden" class="form-control">
+                            <input type="checkbox" id="@item.ID" />
+                            <label class="partially-booked" for="">
+                                @item.AssignSpaceNumber  <br />
+                                Booked for<br />
+                                @item.StartTimeIfPartial.Value.ToString(@"hh\:mm")-@item.EndTimeIfPartial.Value.ToString(@"hh\:mm")
+                            </label>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <div class="parking-space column is-1">
+                        <input type="checkbox" disabled checked id="@item.ID" />
+                        <label for="@item.ID">@item.AssignSpaceNumber</label>
+                    </div>
+                }
+            }
+            else if (!Model.Any(x => x.CanThisUserfreeThisSpace))
+            {
+                <div class="parking-space column is-1">
+                    <form onclick="this.submit()" asp-action="UpdateAssignedUser" asp-controller="ManageUserAssignmentsToParking" method="post" data-ajax="true" data-ajax-method="post">
+                        <input asp-for="@item.ID" name="ID" type="hidden" class="form-control">
+                        <input type="checkbox" id="@item.ID" />
+                        <label for="">
+                            @item.AssignSpaceNumber
+                        </label>
+                    </form>
+                </div>
+            }
+            else
+            {
+                <div class="parking-space column is-1">
+                    <input type="checkbox" id="@item.ID" />
+                    <label for="">@item.AssignSpaceNumber</label>
+                </div>
+            }
+        }
+
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <p>The list of days is empty, an administrator must add more days</p>
+}

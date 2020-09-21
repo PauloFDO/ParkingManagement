@@ -1,0 +1,184 @@
+﻿*, *:before, *:after {
+  box-sizing: border-box; }
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.parking-spaces {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%; }
+
+.parking-space {
+  display: flex;
+  flex: 0 0 14.28571428571429%;
+  position: relative;
+  width: 100%;
+  border: solid;
+  border-color: white; }
+  .parking-space input[type=checkbox] {
+    position: absolute;
+    opacity: 0; }
+  .parking-space input[type=checkbox]:checked + label {
+    background: gray;
+    background-image: url("../../images/carsmall.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: forestgreen;
+    -webkit-animation: slide 1s linear;
+    animation-iteration-count: 1; }
+  .parking-space input[type=checkbox]:disabled + label {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+    background: #dddddd;
+    overflow: hidden;
+    background-image: url("../../images/carsmall.png");
+    background-position: center;
+    background-repeat: no-repeat; }
+  .parking-space form {
+    width: 100%; }
+  .parking-space label {
+    color: white;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5rem;
+    padding: 35px 0px 0px 0px;
+    background: gray;
+    border-radius: 5px;
+    animation-duration: 300ms;
+    animation-fill-mode: both; }
+  .parking-space .partially-booked {
+    padding: 0px 0px 0px 0px;
+    background-image: none !important; }
+
+@-webkit-keyframes slide {
+  from {
+    background-position: 50% 100px; }
+  to {
+    background-position: 50% 0px; } }
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1); }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1); }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1); }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1); }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1); }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1); }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1); }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1); }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand; }
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all; }
+
+a {
+  color: #0366d6; }
+
+.header-color {
+  background-color: #013a65 !important; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac; }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac; }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px; }
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; } }
+
+.border-top {
+  border-top: 1px solid #e5e5e5; }
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit; }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  margin-bottom: 60px;
+  min-height: 100%; }
+
+.footer {
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  /* Vertically center the text there */ }
+
+.car-space {
+  border-style: solid; }

@@ -1,0 +1,72 @@
+﻿@model List<IGrouping<string, SpaceAndUserAssignmentIndex>>
+@using ApplicationSettings
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (User.IsInRole(ConstantRoles.AdministratorRole))
+{
+    <div class="is-pulled-right">
+        <form asp-action="CreateMoreParkingDaysInAdvance" asp-controller="ManageParkingSpace" method="post" data-ajax="true" data-ajax-method="post">
+            <input value="Add 7 more days" type="submit" />
+        </form>
+    </div>
+}
+
+@foreach (var group in Model)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Parking number
+                </th>
+                <th>
+                    Assigned to
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in group)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AssignedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AssignSpaceNumber)
+                    </td>
+                    @if (string.IsNullOrEmpty(item.Description))
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AssignedUser)
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                    }
+                    @if (User.IsInRole(ConstantRoles.AdministratorRole) || item.DoesThisSpaceBelongToUser)
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
