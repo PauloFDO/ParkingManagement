@@ -42,8 +42,14 @@ namespace Parking.Controllers
 
         private async Task<IEnumerable<ParkingAndDateRelationship>> CreateDataIfNeccesary()
         {
-            int daysToAddInAdvance = 7;
-            await CheckCurrentDays.CreateNextParkingDaysIfNeccesary(daysToAddInAdvance, _parkingManager, _parkingDetailsManager, _parkingManagementManager);
+            var allPArkingData = _parkingManagementManager.GetTodayRecordsAsync().Result.ToList();
+
+            if (!allPArkingData.Any())
+            {
+                int daysToAddInAdvance = 7;
+                await CheckCurrentDays.CreateNextParkingDaysIfNeccesary(daysToAddInAdvance, _parkingManager, _parkingDetailsManager, _parkingManagementManager);
+                allPArkingData = _parkingManagementManager.GetTodayRecordsAsync().Result.ToList();
+            }
 
             return await _parkingManagementManager.GetTodayRecordsAsync();
         }

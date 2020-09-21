@@ -5,7 +5,7 @@
 }
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New Parking Spot</a>
 </p>
 <table class="table">
     <thead>
@@ -26,7 +26,14 @@
                 @Html.DisplayFor(modelItem => item.ParkingNumber)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PermanentlyAssignToUser)
+                @if (string.IsNullOrEmpty(item.PermanentlyAssignToUser))
+                {
+                    <p>Free parking slot</p>
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.PermanentlyAssignToUser)
+                }
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ParkingID">Edit</a>
