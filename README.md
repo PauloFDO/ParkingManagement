@@ -2,6 +2,8 @@
 
 I created this small parking management app to deal with the parking problems in my current company:
 
+![alt text](https://01ob3q.db.files.1drv.com/y4mK8ytYuhPLNwTnjcyaRnVC0m6nsUb9JKu1h3pDtOuOjGwc9xCKbjQ-j4QuObJJJ7huVcWWlICHXadkL2dliJz_PV5nVhZwM7JT87fCbSEiidypvovuw6u8Dgo29zC-MDkPdStAH4AxkDzJxM9SBIPZZSyHyCybnSJhnfIYGQKwyyU1i0CvNQYTh4_73X5z_S4ehNx81NUXMQxPI5lxkwFJg?width=617&height=217&cropmode=none)
+
 -Some parking spaces are assigned to specific people
 
 -Some and some are free for everyone
@@ -30,7 +32,6 @@ All of that was being handle with emails, which could get quite confusing and ma
 
 -Azure Single Sign On is fully implemented (in the original version only employees can use it I updated this one to allow for login and register with some dafault users on the seeding)
 
-![alt text](https://01ob3q.db.files.1drv.com/y4mK8ytYuhPLNwTnjcyaRnVC0m6nsUb9JKu1h3pDtOuOjGwc9xCKbjQ-j4QuObJJJ7huVcWWlICHXadkL2dliJz_PV5nVhZwM7JT87fCbSEiidypvovuw6u8Dgo29zC-MDkPdStAH4AxkDzJxM9SBIPZZSyHyCybnSJhnfIYGQKwyyU1i0CvNQYTh4_73X5z_S4ehNx81NUXMQxPI5lxkwFJg?width=617&height=217&cropmode=none)
 
 ![alt text](https://01oc3q.db.files.1drv.com/y4m-VgiJcrXPVVrqRgW-F7sxckFoEuaQGKJAaWXmIpaRMBcCKDywsYvkEc7S32FyA9k0xUD5LCAgM1Gtng1-WePQtDx2dT29nVFnkwfH4_hTQcpPsRglcFGfPKjpM5AxmppYfnyxz1ZcySkT6L5jHwQdudS_ownHQ0v5ZjRrQ1LfiTS9GQ0rdlhhiXwf5Masb_Okm99Xm2cFosys-lHpC8wng?width=534&height=525&cropmode=none)
 
