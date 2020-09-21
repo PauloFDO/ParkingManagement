@@ -1,18 +1,10 @@
 # ParkingManagement
 
-I created this small parking management app to deal with the parking problems in my current company:
+I created this small parking management app to deal with the parking problems in my current company.
 
 ![alt text](https://01ob3q.db.files.1drv.com/y4mK8ytYuhPLNwTnjcyaRnVC0m6nsUb9JKu1h3pDtOuOjGwc9xCKbjQ-j4QuObJJJ7huVcWWlICHXadkL2dliJz_PV5nVhZwM7JT87fCbSEiidypvovuw6u8Dgo29zC-MDkPdStAH4AxkDzJxM9SBIPZZSyHyCybnSJhnfIYGQKwyyU1i0CvNQYTh4_73X5z_S4ehNx81NUXMQxPI5lxkwFJg?width=617&height=217&cropmode=none)
 
--Some parking spaces are assigned to specific people
-
--Some and some are free for everyone
-
--Public parking spaces could be assigned to clients.
-
--Private parking spaces could be free on specific days
-
-All of that was being handle with emails, which could get quite confusing and many emails could be send in anormal day, so I decided to do something about it on my own time, with this app you can:
+All the parking management was being handled by email, which could get quite confusing and many emails could be sent in a normal day, so I decided to do something about it on my own time, it is not fancy but it cover all the scenarios:
 
 -Create as many parking spots as you need
 
@@ -20,13 +12,13 @@ All of that was being handle with emails, which could get quite confusing and ma
 
 -Any User can take any free parking space on that same day (only one per person).
 
--Parking spaces can be booked for external clients by an administrator, for the entire day or on a specific time frame (any user will be alerted of this time frame but can take the space out of it).
+-Parking spaces can be booked for external clients by an administrator for the entire day or on a specific time frame (any user will be alerted of this time frame but can take the space out of it).
 
 -An administrator user has total control to manage all parking spaces on any day.
 
 -An normal user can manage parking spaces assigned on any day.
 
--It will add days automatically (assigned spots will be assigned by default), or admin can add days in advance if something needs to be manually add for an specific day.
+-It will add days automatically (users with assigned spots will be assigned by default), or an admin can add days in advance if something needs to be manually add for an specific day.
 
 -Weekends are ignored.
 
