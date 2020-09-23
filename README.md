@@ -6,6 +6,8 @@ On my own time I created this small parking management app to deal with the park
 
 All the parking management was being handled by email, which could get quite confusing and many emails could be sent in a normal day, so I decided to do something about it on my own time, it is not fancy but it cover all the scenarios:
 
+-Azure Single Sign On is fully implemented, a parameter in the web.config turns it on and off, in the original version only my company employees can use it, they do not need to register as the app automatically takes all the company users from Azure so they can simply login using their company login without any extra step, I updated this one to allow for login and registration, with some default users on the seeding.
+
 -Create as many parking spots as you need
 
 -Have parking spaces permanently assigned to one person (who has total control over it), or free so anyone can use it
@@ -25,9 +27,6 @@ All the parking management was being handled by email, which could get quite con
 -It will add days automatically (users with assigned spots will be assigned to it by default, they can free it at any time), or an admin can add days in advance if something needs to be manually add for an specific day.
 
 -Weekends are ignored.
-
--Azure Single Sign On is fully implemented, a parameter in the web.config turns it on and off (in the original version only my company employees can use it, they do not need to register as the app automatically take all the company users from Azure so they can simply login using their company login, I updated this one to allow for login and register with some dafault users on the seeding)
-
 
 ![alt text](https://01ow3q.db.files.1drv.com/y4mvqyZyDODbBjdIE-8a1yME8vlUHP8v9xEEaiUNSbWcfT_Pze23z3SgTPzAOckyPeWAuR7ghunF3Kze_3p34QsqNsivwOBWAVD5iU8Hr-EFDcYu74XqyzHKA8wik_7o0K7x5Snt1ByntWQgSSChqHmUrWhekFdbKaiYoKSKytCDz1WYzgj12zRhnUFXtfzmADOw0medbjqruZLU562Y-OCQA?width=1283&height=547&cropmode=none)
 
