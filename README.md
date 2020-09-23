@@ -22,7 +22,7 @@ All the parking management was being handled by email, which could get quite con
 
 -Weekends are ignored.
 
--Azure Single Sign On is fully implemented (in the original version only my company employees can use it, they do not need to register as the app automatically take all the company users from Azure, I updated this one to allow for login and register with some dafault users on the seeding)
+-Azure Single Sign On is fully implemented (in the original version only my company employees can use it, they do not need to register as the app automatically take all the company users from Azure so they can simply login using their company login, I updated this one to allow for login and register with some dafault users on the seeding)
 
 
 ![alt text](https://01oc3q.db.files.1drv.com/y4m-VgiJcrXPVVrqRgW-F7sxckFoEuaQGKJAaWXmIpaRMBcCKDywsYvkEc7S32FyA9k0xUD5LCAgM1Gtng1-WePQtDx2dT29nVFnkwfH4_hTQcpPsRglcFGfPKjpM5AxmppYfnyxz1ZcySkT6L5jHwQdudS_ownHQ0v5ZjRrQ1LfiTS9GQ0rdlhhiXwf5Masb_Okm99Xm2cFosys-lHpC8wng?width=534&height=525&cropmode=none)
