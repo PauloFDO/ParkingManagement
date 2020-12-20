@@ -1,6 +1,6 @@
 # ParkingManagement
 
-On my own time I created this small parking management app to deal with the parking problems of my current company.
+On my own time I created this small parking management app to deal with the parking problems of my previous company.
 
 ![alt text](https://01ob3q.db.files.1drv.com/y4mK8ytYuhPLNwTnjcyaRnVC0m6nsUb9JKu1h3pDtOuOjGwc9xCKbjQ-j4QuObJJJ7huVcWWlICHXadkL2dliJz_PV5nVhZwM7JT87fCbSEiidypvovuw6u8Dgo29zC-MDkPdStAH4AxkDzJxM9SBIPZZSyHyCybnSJhnfIYGQKwyyU1i0CvNQYTh4_73X5z_S4ehNx81NUXMQxPI5lxkwFJg?width=617&height=217&cropmode=none)
 
